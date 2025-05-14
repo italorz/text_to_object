@@ -1,40 +1,96 @@
-Descrição:
-Projeto realizado em parceria com a faculdade unimar e empresa Dsin no intuito de integrar front-end em Flutter usando biblioteca speck to text,
- passando para este projeto de api com gemini convertendo o texto em objeto para salvar no banco de dados.
- O projeto foi desenvolvido em typescript no intuído de integrar com outros backend da empresa (Java, C# .net code, php laravel),
- atraves do gerenciamento de Filas usando RabbitMq, e ou Kafka.
+# 🎤 Integração Flutter com API Google Gemini (Texto → Objeto → Banco de Dados)
 
-Instruções:
-1.Acesse o link e gere uma chave de api google gemini:
- [link](https://aistudio.google.com/apikey)
-![image](https://github.com/user-attachments/assets/518d8c3f-2c1b-4518-ac0b-76cb852d49f5)
+Projeto desenvolvido em parceria com a **Faculdade Unimar** e a empresa **Dsin** com o objetivo de integrar um front-end em **Flutter** utilizando a biblioteca `speech_to_text` a uma API que converte texto em objeto utilizando a **API Google Gemini**, armazenando os dados em um banco de dados.
 
-2.crie o arquivo .env na raiz do projeto
-e cole dentro do arquivo na seguinte forma:
-![image](https://github.com/user-attachments/assets/5f60490b-b6ed-4cbf-970a-8de63f0e6df9)
-substituindo "*" pela chave da api
-obs: neste tipo de arquivo não é nescessario uso de aspas.
+> O back-end foi implementado em **TypeScript**, visando integração com sistemas da empresa desenvolvidos em **Java**, **C# (.NET Core)** e **PHP (Laravel)**. A comunicação entre os serviços utiliza **RabbitMQ** e/ou **Kafka** para gerenciamento de filas.
 
-3.Instalação e dependencias do projeto:
-Certifique de que esta com o node instalado, caso contrario pode acessar o site:
-[link](https://nodejs.org/)
+---
 
-3.1. para se certificar de que o node esta instalado, no cmd ou terminal, digite:
-"npm -v"
-obs: caso seu terminal retorne uma numeração indicando a versao, quer dizer que esta tudo certo, caso contrario tente reiniciar a maquina.
-3.2. apos isso com "VS CODE" aberto podemos instalar as dependencias:
-"npm install fastify @google/genai mime dotenv"
-"npm install -D typescript ts-node @types/node",
-para iniciar o projeto:
-"npx ts-node src/server.ts"
-o terminal deve retornar a seguinte mensagem:
-"Server listening at http://localhost:3000"
+## 🚀 Instruções de Configuração
 
-pronto sua api esta funcionando para testar podemos usar um http client, recomendo o uso do PostMan
-link para download do postman:
-[link](https://www.postman.com/downloads/)
-seque exemplo:
-![image](https://github.com/user-attachments/assets/0e80715d-f876-4872-b58f-e5392a8f7d72)
-imagem, passo 8 ja é retorno em json, ideal para salvar no banco de dados e ou retornar via api para o front-end.
+### 1️⃣ Obtenha sua chave da API Gemini
+
+Acesse o link abaixo para gerar sua chave de API:  
+🔗 [Gerar chave Google Gemini](https://aistudio.google.com/apikey)
+
+![Gerar chave Gemini](https://github.com/user-attachments/assets/518d8c3f-2c1b-4518-ac0b-76cb852d49f5)
+
+---
+
+### 2️⃣ Crie o arquivo `.env`
+
+Na raiz do projeto, crie um arquivo chamado `.env` e adicione a chave no seguinte formato:
+
+```env
+GOOGLE_API_KEY=sua_chave_api_aqui
+```
+
+> ⚠️ Atenção: **Não utilize aspas** no valor da chave.
+
+![Exemplo .env](https://github.com/user-attachments/assets/5f60490b-b6ed-4cbf-970a-8de63f0e6df9)
+
+---
+
+### 3️⃣ Instale o Node.js (caso necessário)
+
+Verifique se o Node.js está instalado com o comando:
+
+```bash
+npm -v
+```
+
+Se não estiver instalado, acesse o site:  
+🔗 [https://nodejs.org/](https://nodejs.org/)
+
+> ✅ Caso o terminal retorne um número de versão, o Node está instalado corretamente.  
+> 🔁 Caso contrário, instale e reinicie o computador.
+
+---
+
+### 4️⃣ Instale as dependências
+
+No terminal, execute:
+
+```bash
+npm install fastify @google/genai mime dotenv
+npm install -D typescript ts-node @types/node
+```
+
+---
+
+### 5️⃣ Inicie o projeto
+
+Para iniciar o servidor local, execute:
+
+```bash
+npx ts-node src/server.ts
+```
+
+Você verá a mensagem:
+
+```bash
+Server listening at http://localhost:3000
+```
+
+---
+
+## 🧪 Testando a API
+
+Recomendamos o uso do **Postman** para testar a API:  
+🔗 [Download Postman](https://www.postman.com/downloads/)
+
+Exemplo de requisição e resposta:
+
+![Exemplo Postman](https://github.com/user-attachments/assets/0e80715d-f876-4872-b58f-e5392a8f7d72)
+
+> 📦 A resposta será retornada em formato **JSON**, ideal para:
 
 
+---
+
+
+
+## 👥 Créditos
+
+- **Faculdade Unimar**
+- **Empresa Dsin**
